@@ -11,7 +11,9 @@
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --require react-native-mock/mock",
     "test:watch": "npm run test -- --watch",
-    "eslint": "eslint index.js src/ test/; exit 0;"
+    "eslint": "eslint index.js src/ test/; exit 0;",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "keywords": [
     "react-native",
@@ -40,7 +42,8 @@
     "react-addons-pure-render-mixin": "15.0.2",
     "react-native-experimental-navigation": "0.26.x",
     "react-native-tabs": "^1.0.9",
-    "react-static-container": "1.0.1"
+    "react-static-container": "1.0.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -67,5 +70,6 @@
     "react-native": "0.26.x",
     "react-native-mock": "0.2.0",
     "sinon": "^1.17.6"
-  }
+  },
+  "snyk": true
 }
